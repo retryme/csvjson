@@ -1,12 +1,16 @@
 import os
 import csv
-
-for root, dirs, files in os.walk(r'C:\Users\erdem.eker\Desktop\Projeler\İgdaş\Postman\config\optimization\poc\samples'):
+## For windows
+##for root, dirs, files in os.walk(r'C:\Users\erdem.eker\Desktop\Projeler\docccc\Postman\config\docccc\poc\samples'):
+# this loop finds files and folders in the given directory
+for root, dirs, files in os.walk('/home/root1/Desktop/samples'):
     print(files)
     len_fil = len(files)
     direc_list = list()
     for i in range(len_fil):
-        dir_er = r'C:\Users\erdem.eker\Desktop\Projeler\İgdaş\Postman\config\optimization\poc\samples' + '\\' + files[i]
+        #for windows
+        # dir_er = r'C:\Users\erdem.eker\Desktop\Projeler\dcoccc\Postman\config\cdcdcd\poc\samples' + '\\' + files[i]
+        dir_er = '/home/root1/Desktop/samples' + '/' + files[i]
         print(dir_er)
         direc_list.append(dir_er)
 
@@ -22,13 +26,13 @@ for file_co in range(leng_of_direclist):
         text_file = open(name_1, "a+")
         csv_reader = csv.reader(csv_file, delimiter=';')
         line_count = 0
-        prnt = 1
+        prnt = 0
         for row in csv_reader:
             if line_count == 0:
-                # print(f'Column names are {", ".join(row)}')
+                print(f'Column names are {",".join(row)}')
                 line_count += 1
             else:
-                # print(f'\t{row[0]} works in the {row[1]} department, and was born in {row[2]}.')
+                #print(f'\t{row[0]} works in the {row[1]} department, and was born in {row[2]}.')
                 if (prnt == 1):
                     print("{")
                     print("\"sebekeSefligiID\"", ":", row[8] + ",")
