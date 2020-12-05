@@ -80,3 +80,5 @@ for file_co in range(leng_of_direclist):
         #text dosyası kapatıldı
         text_file.close()
 
+        #deneme
+
