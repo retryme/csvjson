@@ -13,7 +13,6 @@ for root, dirs, files in os.walk('/home/root1/Desktop/samples'):
         dir_er = '/home/root1/Desktop/samples' + '/' + files[i]
         #print(dir_er)
         direc_list.append(dir_er)
-#deneme
 
 leng_of_direclist = len(direc_list)
 
